@@ -1,5 +1,4 @@
 
-
 #include "main.h"
 
 int is_empty_directory (DIR * temp)
@@ -328,7 +327,7 @@ int write_to_disk(f_state *s, s_spec *needle, u_int64_t len, unsigned char *buf,
 			strcpy(needle->comment, " ");
 
 		audit_msg(s,
-				  "%d:\t%10ld.%s \t %10s \t %10llu \t %s",
+				  "%d:\t%10llu.%s \t %10s \t %10llu \t %s", // http://sourceforge.net/p/foremost/bugs/2/
 				  s->fileswritten,
 				  block,
 				  needle->suffix,
